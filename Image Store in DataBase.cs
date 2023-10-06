@@ -2,4 +2,5 @@
 
         SqlCommand cmd = new SqlCommand($"INSERT INTO [STU] (name, dob, hometown,gender,cricket,img) VALUES('{name}','{dob}','{hometown}','{gender}','{cricket}',@pic)", conn);
             MemoryStream ms = new MemoryStream();
- 
+            pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] pic = ms.ToArray();
