@@ -4,3 +4,5 @@
             MemoryStream ms = new MemoryStream();
             pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             byte[] pic = ms.ToArray();
+            cmd.Parameters.AddWithValue("@pic", pic);
+            cmd.ExecuteNonQuery();
