@@ -8,6 +8,9 @@ using MySql.Data.MySqlClient;
             
             string sql = $"INSERT INTO `user`( `nm`, `snm`, `un`, `pw`, `addr`) VALUES ('{nm}', '{snm}', '{un}', '{pw}', '{addr}');";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
+            if (cmd.ExecuteNonQuery() == 1)
+            {
 
+            }
 
             conn.Close();
