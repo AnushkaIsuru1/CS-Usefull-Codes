@@ -7,5 +7,7 @@ using MySql.Data.MySqlClient;
             catch(MySqlException e){showMessage(e.ToString());}
             
             string sql = $"INSERT INTO `user`( `nm`, `snm`, `un`, `pw`, `addr`) VALUES ('{nm}', '{snm}', '{un}', '{pw}', '{addr}');";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+
 
             conn.Close();
