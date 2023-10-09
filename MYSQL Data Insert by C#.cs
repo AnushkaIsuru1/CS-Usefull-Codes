@@ -5,5 +5,7 @@ using MySql.Data.MySqlClient;
             conn.ConnectionString = servConf;
             try {conn.Open();}
             catch(MySqlException e){showMessage(e.ToString());}
+            
+            string sql = $"INSERT INTO `user`( `nm`, `snm`, `un`, `pw`, `addr`) VALUES ('{nm}', '{snm}', '{un}', '{pw}', '{addr}');";
 
             conn.Close();
