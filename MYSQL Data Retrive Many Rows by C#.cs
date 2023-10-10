@@ -13,3 +13,5 @@ using MySql.Data.MySqlClient;
             {
                 Addrow(st, reader["id"].ToString(), reader["nm"].ToString(), reader["snm"].ToString(), reader["un"].ToString(), reader["addr"].ToString());               
             }
+            reader.Close();
+            conn.Close();
