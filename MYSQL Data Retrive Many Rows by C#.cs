@@ -9,3 +9,7 @@ using MySql.Data.MySqlClient;
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader reader = cmd.ExecuteReader();
 
+            while (reader.Read())
+            {
+                Addrow(st, reader["id"].ToString(), reader["nm"].ToString(), reader["snm"].ToString(), reader["un"].ToString(), reader["addr"].ToString());               
+            }
