@@ -6,3 +6,6 @@ using MySql.Data.MySqlClient;
             try {conn.Open();}
             catch(MySqlException e){showMessage(e.ToString());}
             
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
