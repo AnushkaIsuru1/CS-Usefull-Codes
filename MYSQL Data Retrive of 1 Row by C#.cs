@@ -15,3 +15,5 @@ using MySql.Data.MySqlClient;
             string un = r["un"].ToString();
             string pw = r["pw"].ToString();
             string addr = r["addr"].ToString();
+            r.Close();
+            conn.Close();
