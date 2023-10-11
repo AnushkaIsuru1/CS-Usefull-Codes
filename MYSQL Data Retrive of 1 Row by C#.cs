@@ -10,3 +10,8 @@ using MySql.Data.MySqlClient;
             MySqlDataReader r = cmd.ExecuteReader();
             r.Read();
             
+            string nm = r["nm"].ToString();
+            string snm = r["snm"].ToString();
+            string un = r["un"].ToString();
+            string pw = r["pw"].ToString();
+            string addr = r["addr"].ToString();
